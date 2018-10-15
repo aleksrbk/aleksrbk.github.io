@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bryllup</title>
+
+<style media="screen">
+
+  body{background-color: lightblue}
+
+  h1{
+  font-family:cursive;}
+
+  img{ width: 400px;
+  }
+
+  a{
+    display: inline-block ;
+    text-decoration: none;
+       background-color: Purple;
+       padding-left: 10px;
+       padding-right: 10px;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       border-radius: 1px;
+       font-weight: bold;
+       color: white;
+
+  }
+  a:hover{
+    background-color: darkblue;
+  }
+  img{
+    width: 400px;
+    display: block;
+   margin: auto;
+   padding-right: 200px;
+   padding-left: 200px;
+  }
+</style>
+
+  </head>
+
+  <body>
+<header>
+
+<h1>Bryllup</h1>
+
+  <nav>
+      <ul>
+    <li><a href="index.html">Hovedsiden</a></li>
+    <li><a href="Barnebursdager">Barnebursdager</a></li>
+    <li><a href="Klassefest.html">Klassefest</a></li>
+      </ul>
+  </nav>
+
+  </header>
+
+  <label>Navn:</label>
+  <input name="Navn" required placeholder="Skriv navnet ditt"> <!-- placeholder før text inni skrivefeltet/ required gjør sånn at du må fylle felltet inn-->
+  <br> <!--Linjeskift-->
+
+  <label>Kommer dere med eller uten følge</label>
+
+  <br>
+  <input type="radio" name="gender" value="male" /> Ja <br />
+  <input type="radio" name="gender" value="female" /> Nei <br />
+  <br>
+
+  <label>Hva har du lyst til å spise</label>
+  <select name="velgDrikke" required><!--Select gir en som går nedtrekksmeny-->
+    <option value="brus">Taco</option>
+    <option value="saft">Fisk</option>
+    <option value="vann">Pizza</option>
+
+  </select>
+<img src="bryllup.jpg" >
+  </body>
+
+  <p align="center">Copyright &copy; av Motvind Eventbyrå AS: Kontaktinformasjon:
+
+  Motvind Eventbyrå AS
+  Elias Smiths vei 15
+  1337 Sandvika
+  </p>
+
+</html>
