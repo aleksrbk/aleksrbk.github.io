@@ -1,0 +1,49 @@
+body{
+margin: 0;
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+}
+
+header{
+  display: grid;
+  grid-template-columns: 1fr;
+  position:
+}
+
+header>.lenke{
+
+}
+
+#Logo{
+  display: grid;
+  font-family:Helvetica, sans-serif, Arial;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  background-color: grey;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+#søkebar{
+display: grid;
+grid-template-columns: repeat(7,1fr);
+background-color: lightblue;
+}
+
+main{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 5px;
+grid-auto-rows: minmax(50px,auto); /*Setter en høyde, minst 50px, max til det den blir */
+}
+main>section{
+  background-color: red;
+}
+.middelssak{
+  align-self: right;
+  grid-column: span 2;
+  grid-row: span ;
+}

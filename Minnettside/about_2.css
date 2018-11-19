@@ -1,33 +1,22 @@
-* {
+*{
   margin: 0;
   padding: 0;
 }
 .head{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-  "logo"
-  "home"
-  "about";
 
 }
 .logo{
-grid-area:logo;
 background-color: red;
-grid-column: 1;
+
 }
 .home{
-grid-area:home;
 background: blue;
-grid-column: 2;
-grid-row: 1;
+
 }
 .about{
-grid-area: about;
 background-color: green;
-grid-column: 3;
-grid-row: 1;
 
 }
 .main{
@@ -44,11 +33,15 @@ background-color: red;
 text-align: center;
 background-color: blue
 }
+.relatert{
+  background: white;
+}
+.relatert_2{
+  background-color: white;
+}
 .background2{
 text-align: center;
 background-color: green;
 }
 .footer_info{
 text-align: center;
-
-}
