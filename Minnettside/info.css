@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+
+img{
+  width: 100%;
+}
 .head{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -25,6 +29,10 @@ background-color: green;
   justify-content:center;
 
 }
+
+
+
+
 .background{
 text-align: center;
 background-color: red;
@@ -42,3 +50,4 @@ background-color: green;
 }
 .footer_info{
 text-align: center;
+width: 100%;

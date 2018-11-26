@@ -2,15 +2,17 @@
   margin: 0;
   padding: 0;
 }
+img{
+  width: 100%;
+}
 .head{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
   "logo"
   "home"
   "about";
-
 }
 .logo{
 grid-area:logo;
@@ -19,11 +21,89 @@ grid-column: 1;
 }
 .home{
 grid-area:home;
-background: blue;
+background: #e7e7e4;
 grid-column: 2;
 grid-row: 1;
+padding-top: 10px;
+padding-bottom: 10px;
 }
-.about{
+
+/* Droppdown*/
+
+li a, .dropbtn {
+    color:#666666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-align: left;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    color:#333333;
+}
+
+
+/* Navigasjonsbar*/
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li{
+  display: inline;
+}
+a{
+  padding: 8px;
+}
+li a{
+  color: #666666;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+a:hover{
+  color: #333333;
+}
+
+
+nav a{
+  color: #666666;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+b{
+  color: #666666;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+/* CLASSES*/
+.green{
 grid-area: about;
 background-color: green;
 grid-column: 3;
@@ -32,7 +112,7 @@ grid-row: 1;
 }
 .main{
   display: grid;
-  grid-template-columns: 250px 500px 250px;
+  grid-template-columns: 250px 900px 250px;
   justify-content:center;
 
 }
@@ -42,7 +122,8 @@ background-color: red;
 }
 .info{
 text-align: center;
-background-color: blue
+background-color: blue;
+width:100%;
 }
 .background2{
 text-align: center;
@@ -50,5 +131,4 @@ background-color: green;
 }
 .footer_info{
 text-align: center;
-
 }
