@@ -21,7 +21,7 @@ background-color: green;
 }
 .main{
   display: grid;
-  grid-template-columns: 250px 500px 250px;
+  grid-template-columns: 250px 900px 250px;
   justify-content:center;
 
 }
@@ -31,10 +31,18 @@ background-color: red;
 }
 .info{
 text-align: center;
-background-color: blue
+background-color: blue;
 }
 .relatert{
-  background: white;
+  grid-template-columns: 100px;
+}
+
+.andre{
+  background: yellow;
+  border: 2px solid;
+  display: grid;
+  grid-auto-columns:450px;
+  grid-auto-rows: 200px;
 }
 .background2{
 text-align: center;
