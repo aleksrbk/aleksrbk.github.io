@@ -2,51 +2,184 @@
   margin: 0;
   padding: 0;
 }
+
+body{
+  background-color: #e7e7e4;
+}
+/*Øverst*/
 .head{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "logo"
+  "home"
+  "about";
 
 }
 .logo{
-background-color: red;
-
+background-color: #e7e7e4;
+grid-column: 1;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
 }
+
 .home{
-background: blue;
+grid-area:home;
+background-color: #e7e7e4; /*#e7e7e4*/
+grid-column: 2;
+grid-row: 1;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.colum3{
+grid-area: about;
+background-color: #e7e7e4;
+grid-column: 3;
+grid-row: 1;
 
 }
-.about{
-background-color: green;
-
-}
+/*Andre Classes*/
 .main{
   display: grid;
-  grid-template-columns: 250px 900px 250px;
+  grid-template-columns: 250px 1050px 250px;
   justify-content:center;
-
+  margin:auto;
+  background-color:#f3f3f1 ;
 }
 .background{
-text-align: center;
-background-color: red;
-}
-.info{
-text-align: center;
-background-color: blue;
+background-color:#f3f3f1;
+
 }
 .relatert{
-  grid-template-columns: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 400px;
+  justify-self:center;
+  align-self: center;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+/*Id til Bilde*/
+#Envy{
+  background-image: url(Envy2.png);
+  width: 390px;
+  height: 200px;
 }
 
-.andre{
-  background: yellow;
-  border: 2px solid;
-  display: grid;
-  grid-auto-columns:450px;
-  grid-auto-rows: 200px;
-}
-.background2{
+/*Info class*/
+.info{
 text-align: center;
-background-color: green;
+background-color:#f3f3f1 ; /*95% 	#f3f3f1	rgb(243, 243, 241)	hsl(60, 6%, 95%)*/
+width:100%;
+letter-spacing: -0.0004em;
+}
+
+.info p{
+  margin-bottom: 1em;
+}
+
+/*H1 og H2*/
+h1{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+h2{
+margin-bottom: 20px;
+color: ;
+}
+
+/*Droppdown*/
+
+li a, .dropbtn {
+    color:#666666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgba(249,249,249, 0.8); /*#f9f9f9;*/
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.dropdown-content>a{
+padding-bottom: 30px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-align: left;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    color:#333333;
+}
+
+
+/*Navigasjonsbar*/
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li{
+  display: inline;
+}
+a{
+  padding: 8px;
+}
+li a{
+  color: #666666;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 18px;
+}
+
+a:hover{
+  color: #333333;
+}
+
+
+nav a{
+  color: #666666;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+b{
+  color: #666666;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+/*FOOTER*/
+.main2{
+    display: grid;
+    grid-template-columns: 250px 900px 250px;
+    justify-content:center;
+    background-color: #e9e9e2;
 }
 .footer_info{
 text-align: center;
+}
+
+.footerside{
+text-align: center;
+background-color: #e7e7e4;
+}
