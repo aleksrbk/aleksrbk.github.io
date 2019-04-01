@@ -1,0 +1,18 @@
+
+
+
+
+.dropdown{
+  display: flex;
+  justify-content: space-around;
+}
+
+.venstre-nav{
+  display: flex;
+  justify-content: space-around;
+}
+.dropdown-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
