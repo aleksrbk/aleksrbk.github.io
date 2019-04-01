@@ -1,0 +1,61 @@
+{
+  "Oppgaver":{
+
+    "1":{
+      "tekst i 1":"Hva er en primærnøkkel?",
+      "svar 1":"En primærnøkkel er bestemte objekt som gjør det raskt å finne bestemt identifikasjon"
+    },
+
+    "2":{
+      "tekst i 2":"Hva tror du kan være primærnøkkel for?",
+      "a2":"Elever på skolen kan være fødselsdato"  ,
+      "svar på hele 2": "Her må objektene i oppgavene ha idear som er helt UNIKT og er primært til dem selv, dette kan være tall variasjoner eller gamle bokstaver "
+    },
+
+    "3":{
+      "tekst i 3":"Hva er en kandidatnøkkel?",
+      "svar 3":"Alle alternativer for en identifikasjon er objekter innenfor rammen til kandidatnøkkel"
+    },
+
+    "4":{
+      "tekst i 4":"Hva er en femmednøkkel?",
+      "svar 4":"I stedet for å lagre alle opplysninger om brukeren hver dag, lagrer vi nå referansen, fremednøkkelen, sammen med den nye oppgitte informasjonen/posten"
+    },
+
+    "5":{
+      "tekst i 5":"Hva er normalisering?",
+      "svar 5":"Normalisering skjer når man tar bruk fremmednøkkelen der du får en rydde database som ikke oppdaterer ny opgitt informasjon alternativer"
+    },
+
+    "6":{
+      "tekst i 6":"Lag et objekt med data om brukere av et dataspill. Bruk en fremmednøkkel som viser meldinger fra en av spillerne",
+      "svar 6":{
+        "aleks321":{
+          "highscore":4000,
+          "sistSpilt":"28:01:2019",
+          "mail":"Tull_TUll@.com"
+
+        },
+        "Player_2":{
+          "highscore":250,
+          "sistSpilt":"26:01:2019",
+          "mail":"Tull2_Tull2@.com"
+        }
+      },
+      "meldinger":{
+
+
+        "001":{
+          "tekst":"Heisan Sveisan!",
+          "bruker_id":"aleks321"
+        }
+    }
+  },
+
+    "7":{
+      "tekst i 7":"Opprett objekter og sett opp verdiene nedenfor slik at de tilfredsstiller atomærkravet",
+      "svar 7":"Oppgaven er skrevet i et json document akkurat nå, dette er et greit bruk av objekter atomærkravet"
+    },
+
+  }
+}

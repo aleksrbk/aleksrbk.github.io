@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAtLQzDeiWfF9jRUqgol7licFpZ9N8YHOo",
+    authDomain: "pokedex-bab92.firebaseapp.com",
+    databaseURL: "https://pokedex-bab92.firebaseio.com",
+    projectId: "pokedex-bab92",
+    storageBucket: "pokedex-bab92.appspot.com",
+    messagingSenderId: "211710631485"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  </head>
+  <body>
+
+<button type="button" name="button" onclick="sorterCP()">Best CP</button>
+
+<main>
+  <section id="secCP">
+
+  </section>
+
+</main>
+
+<script type="text/javascript">
+  const db = firebase.database();
+  const pokemon = db.ref("pokemon");
+
+  const secCP = document.querySelector("#secCP")
+
+  function visPokemon(snapshot){
+    console.log(snapshot.val());
+    let poke= snapshot.val();
+    secCP.innerHTML += `
+      <h1>${poke.Name}: ${poke["Type 1"]}</h1>
+      <p>maxCP: ${poke["Max CP"]}</p>
+      `
+    }
+
+      function sorterCP(){
+        secCP.innerHTML=``;
+
+        pokemon
+        .orderByChild("Max CP")
+        .limitToFirst(151)
+        .on("child_added",visPokemon)
+      }
+    </script>
+
+  </body>
+
+</html>

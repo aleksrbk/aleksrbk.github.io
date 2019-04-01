@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<!--
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyADHg2gqQLdGtOvt7dWDclsoPVSEKYyGzs",
+        authDomain: "chat-dat.firebaseapp.com",
+        databaseURL: "https://chat-dat.firebaseio.com",
+        projectId: "chat-dat",
+        storageBucket: "",
+        messagingSenderId: "737141504287"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+-->
+  </head>
+  <body>
+    <h1>Super-Chat</h1>
+    <article id="txtMeldinger"></article>
+
+  <script type="text/javascript">
+  let txtMeldinger = document.getElementById("txtMeldinger");
+  let database = firebase.database();
+  let meldinger = database.ref("meldinger");
+  let nyMelding={
+    "avsender": "Person",
+    "tekst": "Nu går alt så meget bedre"
+  };
+  meldinger.push(nyMelding);
+  function visMelding(snapshot){
+    var melding = snapshot.val();
+    txtMeldinger.innerHTML += `<p> ${melding.avsender} sier: ${melding.tekst}</p>`;
+    <!--Alternativ metode  document.body.innerHTML +=navn "sier" + melding -->
+  }
+  meldinger.on("child_added",visMelding);
+
+  </script>
+
+  </body>
+</html>

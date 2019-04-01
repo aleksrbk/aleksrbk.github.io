@@ -1,0 +1,24 @@
+#main{
+  /* Legger alle nye pokemon i en grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  width: 90%;
+  margin: auto;
+
+}
+
+.Alle-Dyr{
+  background-color: lightyellow;
+  border-radius: 3px;
+}
+#main img{
+  width: 100%;
+}
+body{
+  background-color: lightgreen;
+}
+h1{
+  text-align: center;
+  font-family: sans-serif;
+}

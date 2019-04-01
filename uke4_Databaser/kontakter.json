@@ -1,0 +1,14 @@
+{
+  "kontaktliste":{
+    "1":{
+      "firstName":"Thor Christian",
+      "lastName":"Coward",
+      "telephone":12345678
+    },
+    "2":{
+          "firstName":"Boy Christian",
+          "lastName":"Coward",
+          "telephone":12345678
+        }
+  }
+}

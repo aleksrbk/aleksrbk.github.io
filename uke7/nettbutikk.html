@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDvp_D2au6FRx9tAHKz645DtgzYjz6-fGM",
+        authDomain: "nettputikk.firebaseapp.com",
+        databaseURL: "https://nettputikk.firebaseio.com",
+        projectId: "nettputikk",
+        storageBucket: "nettputikk.appspot.com",
+        messagingSenderId: "17017439882"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+
+    <button type="button" name="button" onclick="sorterPris()">Laveste pris</button>
+
+
+
+    <main>
+      <section id="secVarer">
+
+      </section>
+
+    </main>
+
+
+    <script type="text/javascript">
+      const db = firebase.database();
+      const jakker = db.ref("varer/jakker");
+      const sko= db.ref("varer/sko");
+
+      const secVarer = document.querySelector("#secVarer")
+      function visVare(snapshot){
+        console.log(snapshot.val());
+        let vare= snapshot.val();
+        secVarer.innerHTML += `
+          <h1>${vare.merke}: ${vare.modell}</h1>
+          <p>Pris: ${vare.pris}</p>
+        `
+      }
+
+/*
+      jakker.on("child_added",visVare);
+      sko.on("child_added",visVare)
+
+      sko.orderByChild("pris").on("child_added",visVare);
+
+
+      sko.orderByChild("pris").limitToFirst(2).on("child_added",visVare);
+*/
+
+    /* sko //Referanse til database
+        .orderByChild("merke")
+        .equalTo("Nike")    Vi må vente med denne, det fungerte ikke å bruke 2 orderByChild
+        .orderByChild("pris") //sorteringsfunksjon
+        .limitToFirst(2) //sorteringsfunksjon
+        .on("child_added",visVare) //spørrefunksjon
+    */
+
+
+
+
+        function sorterPris(){
+          secVarer.innerHTML=``;
+
+          sko
+          .orderByChild("pris")
+          .limitToFirst(2)
+          .on("child_added",visVare)
+        }
+    </script>
+
+  </body>
+</html>

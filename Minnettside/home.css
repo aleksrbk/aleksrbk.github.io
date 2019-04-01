@@ -53,7 +53,7 @@ li a, .dropbtn {
 .dropdown{
   position: relative;
   display: inline-block;
-}
+} 
 
 .dropdown-content {
     display: none;
@@ -73,7 +73,6 @@ li a, .dropbtn {
 li a:hover, .dropdown:hover .dropbtn {
     color:#333333;
 }
-
 
 /* Navigasjonsbar*/
 ul{

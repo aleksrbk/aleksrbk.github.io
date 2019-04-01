@@ -1,0 +1,40 @@
+
+/*Oppgaver - media query
+Lag en nettside som skifter farge med bredden på vinduet. Bruk følgende breakpoints:
+a. Gul når den er under 1400px
+b. Grønn når den er under 1000px
+c. Rød når den er under 800px
+d. Blå når den er under 600px
+
+Oppgave 2
+Skriv kode for en nettside som bytter bakgrunnsbilde i body-elementet når bredden på vinduet i nettleseren endres.
+
+body{
+  background-image: url("bilde.jpg");
+}
+
+Oppgave 3
+Bruk grid og presenter hver kolonne med matretter og hva matrettene heter.
+Det skal være fire matretter i bredden i utgangspunktet.
+Bruk media queries til å sørge for at det blir først tre, så to, så til slutt bare en matrett i bredden.
+*/
+@media(max-width:1000px){
+  body{
+    /*background-color: green;*/
+    background-image: url("Jorda.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media(max-width:800px){
+  body{
+    /*background-color: red;*/
+    background-image: url("Mars.jpg");
+  }
+}
+@media(max-width:600px){
+  body{
+    /*background-color: blue;*/
+    background-image: url("Merkuer.jpg");
+  }
+}
