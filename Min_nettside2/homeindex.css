@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+}
+.del_2{
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-gap: 10px;
+width: 100px;
+justify-content: center;
+}
+.del_2>div{
+  background-color: #eee;
+  padding: 10px;
+}
+.del_2>div:nth-child(odd){
+  background-color: #ddd;
+}
