@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCDdgSYbTznUdXPAPRGnGcHJ2mPTwfjHAw",
+        authDomain: "booker-a2f98.firebaseapp.com",
+        databaseURL: "https://booker-a2f98.firebaseio.com",
+        projectId: "booker-a2f98",
+        storageBucket: "",
+        messagingSenderId: "568693893082"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
+  </head>
+  <body>
+
+    <main>
+
+    </main>
+
+<script>
+       const main = document.querySelector("main");
+
+       let url_string = window.location.href;
+       let url = new URL(url_string);
+       let parent = url.searchParams.get("parent");
+       let key = url.searchParams.get("key");
+
+       console.log(key,parent)
+
+       const db = firebase.database();
+       const valgtBok = db.ref("Bokliste/"+parent+"/"+ key);
+
+       valgtBok.on("value,genererHTML");
+
+       function genererHTML(snapshot){
+
+          let key = snapshot.key;
+          let objekt = snapshot.val();
+          let data = snapshot.ref.parent.kay;
+
+           main.innerHTML +=`
+           <div class="1-del">
+           <h1>${DisplaySnap.name}</h1>
+           <p>Introduction:${Bokliste.introduction}</p>
+           </div>
+           <div class="2-del">
+           <img src="${Bokliste.imgdisplay}" alt="">
+           <p>Author:${Bokliste.author}</p>
+           <p>Genre:${Bokliste.genre}</p>
+           <p>Genre:${Bokliste.genre2}</p>
+           </div>
+           `;
+       }
+       Bokliste.on("value", visBokliste)
+       </script>
+  </body>
+</html>

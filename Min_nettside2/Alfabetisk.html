@@ -26,21 +26,20 @@
   <body>
 
     <header>
-    <h1 class="logo">Logo</h1>
+    <h2 class="logo" onclick="window.location.href='homeindex.html'">Look📔</h2>
 <input type="checkbox" id="nav-toggle" class="nav-toggle">
 <nav>
-  <div class="search-box">
-    <input class="search-txt" type="text" placeholder="Type to search">
-    <a class= "search-btn" href="#">
-    <i class="fas fa-search"></i>
-  </a>
-  </div>
+
 <ul>
   <li><a href="#">Books</a></li>
-  <li><a href="#">Films</a></li>
-  <li><a href="#">Rating</a></li>
-  <li><a href="#">Support</a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li class="search-box">
+    <input class="search-txt" type="text" placeholder="Type to search">
 
+  </li>
 
 
 
@@ -53,15 +52,49 @@
 
   </header>
 
-  <div class="content">
-    <h2>Your content would go here</h2>
-  </div>
-
-
-
     <main>
-      <div onclick="visAlleFantasy()">trykk her</div>
-      <section id="secBoker">
+
+
+      <div class="Mulige-valg">
+
+        <div class="valg" onclick="visAlle"> All books </div>
+        <div class="valg" onclick="visAlleAlfabetisk"> Alfabetical order </div>
+        <div class="dropnedbtn" onclick="myFunction()"> Genre <i class= "fa fa-caret-down"></i>
+
+          <div class="dropdown-kontent" id="myDropdown">
+            <div class="valg" onclick="visAlleAdventure()"> Adventure </div>
+            <div class="valg" onclick="visAlleAction()"> Action </div>
+            <div class="valg" onclick="visAlleFantasy()"> Fantasy </div>
+            <div class="valg" onclick="visAlleDystopia()"> Dystopia</div>
+            <div class="valg" onclick="visAlleHistorie()"> History </div>
+          </div>
+
+        </div>
+      </div>
+
+            <script>
+
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropnedbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+            </script>
+      <div>
+        <section id="secBoker">
+
+      </section>
+    </div>
+
+      <section id="secPopup">
 
       </section>
     </main>
@@ -70,36 +103,110 @@
 
     const main = document.querySelector("main");
     const secBoker = document.querySelector("#secBoker");
+    const secPopup = document.querySelector("#secPopup");
     const db = firebase.database();
     const Bokliste = db.ref("Bokliste")
+
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let type = url.searchParams.get("type");
+
+    if(type === "visAlleFantasy"){
+      visAlleFantasy();
+    }
+    else if (type ==="visAlleAction") {
+      visAlleAction();
+    }
+    else{
+      visAlle();
+    }
 
 
     function visDisplay(snapshot){
 
       let DisplaySnap = snapshot.val();
       let key = snapshot.key;
+      let parent = snapshot.ref.parent.key;
       console.log(key);
       console.log(DisplaySnap);
 
       secBoker.innerHTML +=`
       <article class="Display_1">
-      <a href="info-om.html?id${key}"><img src="${DisplaySnap.imgdisplay}" alt="">
+      <a onclick="visValgt('${key}')"><img src="${DisplaySnap.imgdisplay}" alt="">
       </a>
-      <h1>${DisplaySnap.name}</h1>
+
       `;
     }
     function visAlle(){
-      secBoker.innerHTML=``
-      Bokliste.on("child_added",visDisplay)
+      secBoker.innerHTML=``;
+      Bokliste.on("child_added",visDisplay);
+    }
+
+    function visAlleAlfabetisk(){
+      secBoker.innerHTML=``;
+      Bokliste.orderByChild("name").startAt("A").endAt("H").on("child_added,visDisplay");
     }
 
     function visAlleFantasy(){
-      secBoker.innerHTML=``
-      Bokliste.orderByChild("genre").equalTo("Fantasy").on("child_added",visDisplay)
-      Bokliste.orderByChild("genre2").equalTo("Fantasy").on("child_added",visDisplay)
+      secBoker.innerHTML=``;
+      Bokliste.orderByChild("genre").equalTo("Fantasy").on("child_added",visDisplay);
+      Bokliste.orderByChild("genre2").equalTo("Fantasy").on("child_added",visDisplay);
     }
 
-    visAlle();
+// Jeg skrev den samme funksjon som over i visAlleFantasy, men det ga meg ikke noe svar
+
+/*
+    function visAlleAction(){
+      secBoker.innerHTML=``
+      Bokliste.orderByChild("genre")equalTo("Action").on("child_added",visDisplay)
+      Bokliste.orderByChild("genre2").equalTo("Action").on("child_added",visDisplay)
+    } */
+/*
+    function visAlleDystopia(){
+      secBoker.innerHTML=``
+      Bokliste.orderByChild("genre")equalTo("Dystopia").on("child_added",visDisplay)
+      Bokliste.orderByChild("genre2").equalTo("Dystopia").on("child_added",visDisplay)
+    }
+
+    function visAlleHistorie(){
+      secBoker.innerHTML=``
+      Bokliste.orderByChild("genre")equalTo("History").on("child_added",visDisplay)
+      Bokliste.orderByChild("genre2").equalTo("History").on("child_added",visDisplay)
+    }
+
+    function visAlleAdventure(){
+      secBoker.innerHTML=``
+      Bokliste.orderByChild("genre")equalTo("Adventure").on("child_added",visDisplay)
+      Bokliste.orderByChild("genre2").equalTo("Adventure").on("child_added",visDisplay)
+    }
+    */
+
+    function skjulValgtObjekt(){
+      secPopup.style.display = "none";
+      img.style.display = "none";
+      h3.style.display = "none";
+    }
+
+    function visValgt(key){
+      secPopup.innerHTML = "";
+      secPopup.style.display = "block";
+      const valgtBok = db.ref("Bokliste/"+key);
+      valgtBok.on("value",genererHTMLvalgtBok);
+    }
+    function genererHTMLvalgtBok(snapshot){
+      let DisplaySnap = snapshot.val();
+      let key = snapshot.key;
+      let parent = snapshot.ref.parent.key;
+      console.log(key);
+      console.log(DisplaySnap);
+
+      secPopup.innerHTML =`
+        <button onclick="skjulValgtObjekt()">x</button>
+        <h2>${DisplaySnap.name}<img src="${DisplaySnap.imgdisplay}"></h2>
+        <h3>${DisplaySnap.author}</h3>
+        <h4>${DisplaySnap.introduction}<h4>
+      `;
+    }
 
     </script>
 

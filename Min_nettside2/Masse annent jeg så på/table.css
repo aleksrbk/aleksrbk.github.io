@@ -1,0 +1,52 @@
+
+table.blueTable {
+  border: 1px solid #e3ecf2;
+  background-color: #f9f3e8;
+  text-align: center;
+  border-collapse: collapse;
+  height: 300px;
+  width: 230px;
+}
+
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+
+.names{
+  text-align: left;
+  font-size: 11px;
+}
+.innerimg{
+    width: 50px;
+    float: right;
+    margin: 0px 0px 15px 15px
+}
+
+.numbers{
+  font-weight: bold;
+  font-size: 11px;
+
+}
+
+table.blueTable tr:nth-child(even) {
+  background: #ffe4b5;
+}
+table.blueTable thead {
+  background: #e09814;
+  border-bottom: 2px solid #444444;
+
+}
+table.blueTable thead th {
+  font-size: 14px;
+  color: #000000;
+  border-left: 2px #AAAAAA;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+.tableContainer{
+/*  height: 300px;
+  overflow:hidden;
+  */
+}

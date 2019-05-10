@@ -1,0 +1,19 @@
+
+
+
+<h1>Movie Search</h1>
+<input type="text" (keydown)="search($event)" placeholder="search movies..." class="input">
+
+<div *ngFor="let book of booker-a2f98">
+  <h4>{{book?.name}}</h4>
+  <p>
+    {{book?.author}}
+  </p>
+</div>
+
+<div *ngIf="booker.a2f98?.length < 1">
+  <hr>
+  <p>
+    No results found :(
+  </p>
+</div>

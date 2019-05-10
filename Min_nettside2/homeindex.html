@@ -4,65 +4,126 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="homeindex.css">
     <title></title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCDdgSYbTznUdXPAPRGnGcHJ2mPTwfjHAw",
+        authDomain: "booker-a2f98.firebaseapp.com",
+        databaseURL: "https://booker-a2f98.firebaseio.com",
+        projectId: "booker-a2f98",
+        storageBucket: "",
+        messagingSenderId: "568693893082"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
   <body>
 
-    <header>
+      <header>
+      <h2 class="logo" onclick="window.location.href='homeindex.html'">Look📔</h2>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+
+  <ul>
+    <li><a href="Alfabetisk.html">Books</a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li class="search-box">
+      <input class="search-txt" type="text" placeholder="Type to search">
+
+    </li>
+
+
+
+
+  </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+  <span></span>
+  </label>
 
     </header>
 
+
     <main>
 
-      <div class="del_1">
+      <div class="Slideshow">
 
+          <img src="Fantasy.jpg" alt="">
       </div>
 
-      <div class="del_2">
+      <div class="container">
 
-        <div class="">
-          lorem awdawfawf gggawfawfa
+        <div class="kol-1">
+
+            <a href="Alfabetisk.html?type=visAlleFantasy">
+            <h2>Fantasy</h2>
         </div>
 
-        <div class="">
-          lorem awdawfawf gggawfawfa
+        <div>
+          <div class="tableContainer">
+            <table class="blueTable">
+            <thead>
+            <tr>
+            <th>Rating</th>
+            <th>Title</th>
+            </tr>
+            </thead>
+            <tfoot></tfoot>
+            <tbody id="tableBody">
+            </tbody>
+            </table>
+          </div>
         </div>
-
       </div>
 
-      <div class="del_2">
+      <script type="text/javascript">
+        const db = firebase.database();
+        const Bokliste = db.ref("Bokliste");
+        const tableBody = document.querySelector("#tableBody");
+        let tall = 1;
 
-        <div class="">
-          <div class="">
+        Bokliste.orderByChild("score").limitToFirst(5).on("child_added",genererTabell);
 
-          </div>
+        function genererTabell(snapshot){
+          let bok = snapshot.val();
+          let key = snapshot.key;
+          tableBody.innerHTML +=`
+            <tr>
+              <td class="numbers"  onclick="window.location.href='Alfabetisk.html'">${tall}</td>
+              <td>
+                <!--<img src=${bok.miniImage}>-->
+                <img class="innerimg" onclick="window.location.href='Alfabetisk.html'" src="${bok.imgdisplay}"></img>
+                <h4 class="names"  onclick="window.location.href='Alfabetisk.html'">${bok.name}</h4>
+                <p class="names"  onclick="window.location.href='Alfabetisk.html'">Author: ${bok.author}</p>
+              </td>
+            </tr>
+          `;
+          tall = tall + 1;
+        }
 
-          <div class="">
-
-          </div>
-
-        </div>
-
-
-        <div class="">
-          <div class="">
-
-          </div>
-
-          <div class="">
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-
+        </script>
 
     </main>
 
     <footer>
 
+      <div class="main2">
+        <hr>
+          <div class="footer_info">
+            <a href="https://nb-no.facebook.com/"><img src="Facebook.png"></a>
+            <a href="https://twitter.com/search-home"><img src="Twitter.png"></a>
+              <br>
+
+                <p><b>Copyright &copy; BY Aleksander KM.Ltd</b><p>
+
+            </nav>
+          </div>
+
+      </div>
 
     </footer>
 

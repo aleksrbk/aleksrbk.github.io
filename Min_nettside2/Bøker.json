@@ -3,61 +3,222 @@
 
 "GuliversTravels":{
 "name": "Guliver's Travels",
-"author": "Jonathan Swift",
+"author": "Author: Jonathan Swift",
 "genre": "Adventure",
 "genre2": "Fantasy",
 "introduction":"Gulliver’s Travels, original title Travels into Several Remote Nations of the World, four-part satirical work by Anglo-Irish author Jonathan Swift, published anonymously in 1726 as Travels into Several Remote Nations of the World. A keystone of English literature, it was one of the books that gave birth to the novel form, though it did not yet have the rules of the genre as an organizing tool. A parody of the then popular travel narrative, Gulliver’s Travels combines adventure with savage satire, mocking English customs and the politics of the day.",
-"imgdisplay":"Folder.png",
+"imgdisplay":"Bilder/Guliver.png",
 "img":"",
-"link": "inf-om.html"
+"link": "info-om.html",
+"score":4
 },
 
 
-"abc":{
-"name": "",
-"author": "",
-"genre": "",
-"genre2": "",
-"introduction":"",
-"imgdisplay":"",
+"Arthur":{
+"name": "Arthur",
+"author": "Author: Folklore",
+"genre": "History",
+"genre2": "Fantasy",
+"introduction":" Follow Arthur from child to king, in the Folklore based history story of Arthur.",
+"imgdisplay":"Bilder/Arthur.png",
 "img":"",
-"link": ""
+"link": "",
+"score":5
 },
 
 
 "Hobbiten":{
     "name": "Hobbiten",
-    "author": "J.r.r Tolkien",
+    "author": "Author: J.r.r Tolkien",
     "genre": "Fantasy",
     "genre2": "Adventure",
     "introduction":"Hobbits, a race of small humanlike creatures, characteristically value peace, simplicity, and cozy homes yet are capable of incredible feats of courage and resourcefulness. The unwilling hero of The Hobbit, Bilbo Baggins, is persuaded to join Thorin and his 12 dwarfs to recover their stolen treasure, which is being guarded by the dragon Smaug. During the expedition, Bilbo finds a magical ring that renders the wearer invisible, which figures prominently in The Lord of the Rings. The Hobbit is the story of Bilbo’s maturing from a seeker of warmth and comforts to a fighter, however humble, for the greater good.",
-    "imgdisplay": "Folder.png",
+    "imgdisplay": "Bilder/Hobbiten.png",
     "img": "Folder.png",
-    "link": "info-om.html"
+    "link": "info-om.html",
+    "score": 2
 },
 "Hungergames":{
   "name": "Hungergames",
-  "author": "Suzanne Collins",
+  "author": "Author: Suzanne Collins",
   "genre": "Dystopian",
   "genre2": "Action",
   "introduction":"The Hunger Games trilogy takes place in an unspecified future time, in the dystopian, post-apocalyptic nation of Panem, located in North America. The country consists of a wealthy Capitol city, located in the Rocky Mountains,[8] surrounded by twelve (originally thirteen) poorer districts ruled by the Capitol. The Capitol is lavishly rich and technologically advanced, but the districts are in varying states of poverty. The trilogy's narrator and protagonist Katniss Everdeen, lives in District 12, the poorest region of Panem, located in Appalachia,[8] where people regularly die of starvation. As punishment for a past rebellion against the Capitol (called the Dark Days), in which District 13 was supposedly destroyed, one boy and one girl from each of the twelve remaining districts, between the ages of 12 and 18, are selected by lottery to compete in an annual pageant called the Hunger Games. The Games are a televised event in which the participants, called tributes, are forced to fight to the death in a dangerous public arena. The winning tribute and his/her home district are then rewarded with food, supplies, and riches. The purposes of the Hunger Games are to provide entertainment for the Capitol and to remind the districts of the Capitol's power and lack of remorse, forgetfulness, and forgiveness for the failed rebellion of the current competitors' ancestors.",
-  "imgdisplay": "Folder.png",
+  "imgdisplay": "Bilder/Hungergames.png",
   "img": "Folder.png",
-  "link": "info-om.html"
+  "link": "info-om.html",
+  "score": 3
 
 },
 
 "HarryPotter":{
 "name": "Harry Potter and the Sorcerer's Stone",
-"author": "J.K Rowling",
+"author": "Author: J.K Rowling",
 "genre": "Fantasy",
 "genre2": "",
 "introduction":"Harry Potter and the Philosopher’s Stone, also called Harry Potter and the Sorcerer’s Stone, the first novel in the immensely popular Harry Potter series by British writer J.K. Rowling. It was first published in Britain in 1997 and appeared in the United States the following year under the title Harry Potter and the Sorcerer’s Stone. The book’s imaginative story line about a boy wizard made it an enduring hit with both children and adults.",
-"imgdisplay":"Folder.png",
+"imgdisplay":"Bilder/Harry.png",
 "img":"Folder.png",
-"link": ""
-}
+"link": "",
+"score": 1
+},
 
+"Bad Days":{
+"name": "Bad days",
+"author": "Author: People",
+"genre": "Action",
+"genre2": "Dystopian",
+"introduction":"Bad days is a bok about young gangsters, living there hard and dystopic life.",
+"imgdisplay":"Bilder/Bad Days.png",
+"img":"",
+"link": "",
+"score":6
+},
+
+"Apocolyps":{
+"name": "Apocolyps",
+"author": "Author: Death",
+"genre": "Dystopian",
+"genre2": "Adventure",
+"introduction":"Follow the two survievers, as they pledge before doom from the ever dying world.",
+"imgdisplay":"Bilder/Apocolyps.png",
+"img":"",
+"link": "",
+"score":7
+},
+
+
+"Born":{
+"name": "Born",
+"author": "Author: Freedom",
+"genre": "Fantasy",
+"genre2": "Adventure",
+"introduction":"An escapyst adventure to another world.",
+"imgdisplay":"Bilder/Born.png",
+"img":"",
+"link": "",
+"score":8
+},
+
+"Creed":{
+"name": "Creed",
+"author": "Author: Danger",
+"genre": "Action",
+"genre2": "History",
+"introduction":"The group that stugles. Life of the Assasins",
+"imgdisplay":"Bilder/Creed.png",
+"img":"",
+"link": "",
+"score":9
+},
+
+"Coluseum":{
+"name": "Coluseum",
+"author": "Author: Facts",
+"genre": "History",
+"genre2": "Adventure",
+"introduction":" Follow the Gladiator from childhood to youth.",
+"imgdisplay":"Bilder/Coluseum.png",
+"img":"",
+"link": "",
+"score":10
+},
+
+"Deep trouble":{
+"name": "Deep trouble",
+"author": "Author: Danger",
+"genre": "Adventure",
+"genre2": "Dystopia",
+"introduction":"Just deep trouble. Nothing special.",
+"imgdisplay":"Bilder/Deep trouble.png",
+"img":"",
+"link": "",
+"score":11
+},
+
+"Dull":{
+"name": "Dull",
+"author": "Author: Boring",
+"genre": "History",
+"genre2": "Action",
+"introduction":"One could think it is just a boring life. ",
+"imgdisplay":"Bilder/Dull.png",
+"img":"",
+"link": "",
+"score":12
+},
+
+"Expert":{
+"name": "Expert",
+"author": "Author: Prof",
+"genre": "History",
+"genre2": "Adventure",
+"introduction":" He calls himself the Expert, mister Expert. ",
+"imgdisplay":"Bilder/Expert.png",
+"img":"",
+"link": "",
+"score":13
+},
+
+"EEEEE":{
+"name": "EEEEE",
+"author": "Author: Weird",
+"genre": "Fantasy",
+"genre2": "Dystopia",
+"introduction":"Trouble seeks him, and the sound follows. EEEEE...",
+"imgdisplay":"Bilder/EEEEE.png",
+"img":"",
+"link": "",
+"score":14
+},
+
+"For the falen":{
+"name": "For the falen",
+"author": "Author: Gravity",
+"genre": "History",
+"genre2": "Action ",
+"introduction":"Six warriors out to avendge 142 fallen.",
+"imgdisplay":"Bilder/For the falen.png",
+"img":"",
+"link": "",
+"score":15
+},
+
+"Forever lost":{
+"name": "Forever lost",
+"author": "Author: Wondering",
+"genre": "Fantasy",
+"genre2": "History",
+"introduction":"They think they are lost.",
+"imgdisplay":"Bilder/Forever lost.png",
+"img":"",
+"link": "",
+"score":16
+},
+
+"Good times":{
+"name": "Good times",
+"author": "Author: Nice",
+"genre": "Fantasy ",
+"genre2": "Adventure",
+"introduction":"A happy feels trip through the sky of heaven.",
+"imgdisplay":"Bilder/Good times.png",
+"img":"",
+"link": "",
+"score":17
+},
+
+"God":{
+"name": "God",
+"author": "Author: The one",
+"genre": "Fantasy ",
+"genre2": "Dystopia",
+"introduction":"Follow a person go mad and turn in to a God.",
+"imgdisplay":"Bilder/God.png",
+"img":"",
+"link": "",
+"score":18
+}
 
 }
 

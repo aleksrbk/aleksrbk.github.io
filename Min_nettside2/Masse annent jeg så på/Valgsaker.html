@@ -1,0 +1,53 @@
+<!--
+    <div class="Mulige-valg">
+
+      <div class="valg"><button class="button" onclick="visAlle"> All books </button></div>
+      <div class="valg"><button class="button" onclick="visAlleAlfabetisk"> Alfabetical order </button></div>
+      <div class="dropned"><button class="dropnedbtn" onclick="myFunction()"> Genre <i class= "fa fa-caret-down"></i> </button>
+
+        <div class="dropdown-kontent" id="myDropdown">
+          <div class="valg"><button class="button" onclick="visAlleAdventure"> Adventure </button></div>
+          <div class="valg"><button class="button" onclick="visAlleAction"> Action </button></div>
+          <div class="valg"><button class="button" onclick="visAlleFantasy"> Fantasy </button></div>
+          <div class="valg"><button class="button" onclick="visAlleDystopia"> Dystopia </button></div>
+          <div class="valg"><button class="button" onclick="visAlleHistorie"> History </button></div>
+        </div>
+
+      </div>
+    </div>
+-->
+
+<div class="Mulige-valg">
+
+  <div class="valg"><a onclick="visAlle"> All books <a/></div>
+  <div class="valg"><a onclick="visAlleAlfabetisk"> Alfabetical order </a></div>
+  <div class="dropdown"><a onclick="myFunction()"> Genre <i class= "fa fa-caret-down"></i> </a>
+
+    <div class="dropdown-content" id="myDropdown">
+      <div class="valg"><a onclick="visAlleAdventure"> Adventure </a></div>
+      <div class="valg"><a onclick="visAlleAction"> Action </a></div>
+      <div class="valg"><a onclick="visAlleFantasy"> Fantasy </a></div>
+      <div class="valg"><a onclick="visAlleDystopia"> Dystopia </a></div>
+      <div class="valg"><a onclick="visAlleHistorie"> History </a></div>
+    </div>
+
+  </div>
+</div>
+
+      <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropnedbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+      </script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <link rel="stylesheet" href="table.css">
+
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCDdgSYbTznUdXPAPRGnGcHJ2mPTwfjHAw",
+            authDomain: "booker-a2f98.firebaseapp.com",
+            databaseURL: "https://booker-a2f98.firebaseio.com",
+            projectId: "booker-a2f98",
+            storageBucket: "",
+            messagingSenderId: "568693893082"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+  </head>
+  <body>
+
+
+
+<div class="tableContainer">
+  <table class="blueTable">
+  <thead>
+  <tr>
+  <th>Fantasy</th>
+  <th>Title</th>
+  </tr>
+  </thead>
+  <tfoot></tfoot>
+  <tbody id="tableBody2">
+  </tbody>
+  </table>
+</div>
+
+
+
+
+<script type="text/javascript">
+  const db = firebase.database();
+  const Bokliste = db.ref("Bokliste");
+  const tableBody2 = document.querySelector("#tableBody2");
+  let tall = 1;
+
+  Bokliste.orderByChild("genre").equalTo("Fantasy").limitToFirst(5).on("child_added",genererTabell);
+
+  function genererTabell(snapshot){
+    let bok = snapshot.val();
+    let key = snapshot.key;
+    tableBody2.innerHTML +=`
+      <tr>
+        <td class="numbers">${tall}</td>
+        <td class="names">
+          <!--<img src=${bok.miniImage}>-->
+
+          <h4>${bok.name}</h4>
+          <p>Author: ${bok.author}</p>
+        </td>
+      </tr>
+    `;
+    tall = tall + 1;
+  }
+</script>
+
+</body>
+
+</html>

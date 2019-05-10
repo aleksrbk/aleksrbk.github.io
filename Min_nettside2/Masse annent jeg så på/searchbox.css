@@ -1,0 +1,19 @@
+
+.search-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 10px;
+  transition: 0.4s;
+}
+
+.search-txt{
+
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 37px;
+    width: 110px;
+}

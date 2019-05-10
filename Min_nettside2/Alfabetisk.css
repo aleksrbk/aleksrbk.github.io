@@ -14,7 +14,7 @@ body {
 	font-weight: 400;
 }
 
-.content {
+content {
   height: 200vh;
   background-image: url(//unsplash.it/1000/1000);
   background-color: #FFFFFF;
@@ -23,6 +23,9 @@ body {
   display: grid;
   place-items: center;
 }
+main{
+  display: grid;
+}
 
 /* navigation styles start here */
 
@@ -30,14 +33,15 @@ header {
   background: var(--background);
   text-align: center;
   position: fixed;
+  top:0;
   z-index: 999;
   width: 100%;
 }
 
 /* changed this from the tutorial video to
    allow it to gain focus, making it tabbable */
-.nav-toggle {
-  position: absolute !important;
+.nav-toggle{
+  position: absolute!important;
   top: -9999px !important;
   left: -9999px !important;
 }
@@ -68,7 +72,7 @@ header {
 }
 
 .nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.nav-toggle-label ::after {
   content: '';
   position: absolute;
 }
@@ -126,14 +130,14 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 550px) {
   .nav-toggle-label {
     display: none;
   }
 
   header {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 4fr) 1fr;
+    grid-template-columns: 1fr auto minmax(625px, 4fr) 1fr;
   }
 
   .logo {
@@ -161,6 +165,7 @@ nav a:hover {
 
   nav ul {
     display: flex;
+    height: 40px;
   }
 
   nav li {
@@ -192,53 +197,160 @@ nav a:hover {
 /*End of HEADER */
 
 
-
+/*Tekstbox*/
 .search-box{
-  position: absol;
-  top: 50%;
-  left: 50%;
-/*  transform: translate(-50%,-50%);
-  background: #2f3640;
-  height: 40px;
-  border-radius: 40px;
-  */
-  padding: 10px;
+  position: relative;
+  top: %;
+  left: %;
   transition: 0.4s;
 }
-/*
-.search-box:hover> .search-txt{
-  width: 240px;
-  padding: 0 6px;
-}
-*/
-/*
-.search-box:hover> .search-btn{
-  background: white;
-}
-*/
-.search-btn{
-  color:#e84118;
-  float: right;
-  width: 39px;
-  height: 38px;
-/*  border-radius: 50%; */
-  background: #2f3640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-}
-
 .search-txt{
-  /*  border: none;
-    background: none;
-    outline: none;
-    float: left;
-*/
-    padding: 0;
+    padding: -1px;
     color: black;
     font-size: 16px;
     transition: 0.4s;
-    line-height: 37px;
+    line-height: 20px;
     width: 110px;
+}
+
+.Mulige-valg  {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  margin-top: 80px;
+
+}
+
+.dropned {
+  float: center;
+  overflow: hidden;
+}
+
+
+
+.dropned .dropnedbtn{
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-kontent {
+  background-color:rgb(221, 247, 255);
+  position: absolute;
+  display: none;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transform: translateX(-21%);
+}
+
+.valg{
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.dropdown-kontent #myDropdown {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  overflow: hidden;
+}
+
+.dropdown-kontent div:hover {
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+.show {
+  display: block;
+  overflow: hidden;
+}
+
+
+
+/* Main Json kontrolleringer  */
+#secBoker{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: px;
+  margin-top: 35px;
+  justify-content: center;
+}
+@media(max-width: 1250px){
+#secBoker{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+
+  }
+}
+
+@media(max-width: 1270px){
+#secBoker{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+
+
+}
+}
+
+@media(max-width: 1080px){
+#secBoker{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+
+
+}
+}
+@media(max-width: 1060px){
+#secBoker{
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+
+
+}
+}
+
+@media(max-width: 865px){
+#secBoker{
+  grid-template-columns: 1fr 1fr 1fr ;
+
+
+}
+}
+@media(max-width: 650px){
+#secBoker{
+  grid-template-columns: 1fr 1fr ;
+
+
+}
+}
+#secPopup{
+  display: none;
+  position: fixed;
+  height: 400px;
+  width: 900px;
+  overflow: hidden;
+  left: 15%;
+  top: 20%;
+  transform: translate(-50% -50%);
+  background-color: rgb(221, 247, 255);
+}
+
+#secPopup img{
+  float: right;
+  margin: 0px 0px 15px 15px;
+}
+#secPopup h3{
+  float: right;
+  margin: 0px 0px 15px 15px;
 }
