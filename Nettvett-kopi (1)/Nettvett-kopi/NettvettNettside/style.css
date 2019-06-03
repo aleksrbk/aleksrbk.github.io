@@ -1,0 +1,106 @@
+
+
+
+.home{
+padding-top: 30px;
+padding-bottom: 30px;
+float: left;
+margin-right: 50px;
+margin-top: -20px;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.home li a {
+    color:#666666;
+    text-align: center;
+    text-decoration: none;
+    animation: fadeAndScale .3s ease-in;
+}
+
+@keyframes fadeAndScale {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+        }
+      }
+
+.dropdown-content ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgba(249,249,249, 0.8); /*#f9f9f9;*/
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+
+.dropdown-content ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li{
+  display: inline;
+}
+
+
+.dropdown-content a:hover {
+  color:blue;
+}
+
+#toggle{
+  display: none;
+}
+
+#toggle:checked ~ .dropdown-content{
+  display: block;
+}
+
+
+  .passord_hovedoverskrift{
+    text-align: center;
+    background-color: lightblue;
+    padding: 20px;
+  }
+
+  .passord_index>li>a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  .passord_index>li>a:hover{
+    text-decoration: underline;
+  }
+
+  .passord_avsnitt{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 20px;
+    background-color: lightgrey;
+  }
+
+  .passord_avsnitt>h2, .passord_avsnitt>p{
+    text-align: center;
+  }
+
+  .passord_avsnitt>p{
+    font-size: 25px;
+  }

@@ -1,0 +1,36 @@
+*{
+font-family: sans-serif;
+box-sizing: border-box;
+}
+/*https://www.youtube.com/watch?v=1D23KgRiHRg*/
+
+.chatContainer{
+  width: 400px;
+  height: 500px;
+  border: 2px solid #ddd;
+  position: relative;
+}
+.chatContainer>.title{
+  width: 100%;
+  background: white;
+  padding: 5px;
+  border-bottom: 1px solid;
+}
+.chatContainer> .title h1{
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  color:#333;
+}
+.chatContainer>#skjema{
+  padding: 6px;
+  background: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+#skjema{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="chatdat.css">
+    <title></title>
+  </head>
+  <body>
+<header>
+
+
+
+  <section class="navbar">
+    <a class="hover" href="homeindex.html">Home</a>
+    <a class="hover" href="#chatdat.css">Chat</a>
+  </section>
+
+</header>
+
+
+<main>
+
+  <section class="HERO">
+
+</section>
+
+  <section class="Hero-2">
+
+  </section>
+
+  <section class="section-center">
+
+    <div class="container is-size">
+
+      <div class="boxen">
+
+        <div class="content">
+          <div class="columns is-centered">
+
+
+
+      
+                <meta charset="utf-8">
+                <title>Chat Dat</title>
+                <link rel="stylesheet" href="SkriveChat.css">
+                  <h1 class="title">Chat Dat</h1>
+
+                <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+                <script>
+                  // Initialize Firebase
+                  var config = {
+                    apiKey: "AIzaSyADHg2gqQLdGtOvt7dWDclsoPVSEKYyGzs",
+                    authDomain: "chat-dat.firebaseapp.com",
+                    databaseURL: "https://chat-dat.firebaseio.com",
+                    projectId: "chat-dat",
+                    storageBucket: "chat-dat.appspot.com",
+                    messagingSenderId: "737141504287"
+                  };
+                  firebase.initializeApp(config);
+                </script>
+
+
+            <section class="chatContainer">
+
+
+            <article id="txtMeldinger"></article>
+            <form id="skjema">
+              <input type="text" id="inpAvsender"required
+              placeholder="Hvem du er?">
+
+              <input type="text" id="inpMening" required
+              placeholder="Hva sier du?">
+
+              <button type="submit"class="button">OK</button>
+            </form>
+
+            </section>
+
+              <script>
+                let database = firebase.database();
+                let meldinger = database.ref("meldinger");
+                let skjema = document.getElementById("skjema");
+                let inpAvsender = document.
+                getElementById("inpAvsender");
+
+                let inpMening = document.
+                getElementById("inpMening")
+                let txtMeldinger = document.
+                getElementById("txtMeldinger")
+                function visMelding(snapshot){
+                  let melding =snapshot.val();
+                  let meldingTekst=`<p>
+                    <b>${melding.avsender}:</b>
+                    <i>${melding.tekst}</i>
+                  </p>`;
+                  txtMeldinger.innerHTML = txtMeldinger.
+                  innerHTML + meldingTekst;
+                }
+
+            function regNyMelding(evt){
+              evt.preventDefault();
+              var nyMelding ={
+                avsender:inpAvsender.value,
+                tekst:inpMening.value
+              };
+              meldinger.push(nyMelding);
+              inpMening.value="";
+
+            }
+
+            meldinger.on("child_added", visMelding);
+            skjema.onsubmit = regNyMelding;
+
+              </script>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+</main>
+
+
+
+<!--
+<nav class="navbar" role="navigation aria-lable="main navigation"">
+
+  <div class="container">
+    <div class="">
+
+      &#127757;
+
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</nav>
+
+
+  </body>
+</html>
+-->

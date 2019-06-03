@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Chat Dat</title>
-    <link rel="stylesheet" href="">
-      <h1>Chat Dat</h1>
+    <link rel="stylesheet" href="SkriveChat.css">
+      <h1 class="title">Chat Dat</h1>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script>
@@ -23,23 +23,26 @@
   </head>
 
   <body>
-    <form id="skjema">
-      <input type="text" id="inpAvsender"required
-      placeholder="Hvem du er?">
+<section class="chatContainer">
 
-      <input type="text" id="inpMening" required
-      placeholder="Hva sier du?">
-
-      <button type="submit"class="button">OK</button>
-</form>
 
 <article id="txtMeldinger"></article>
+<form id="skjema">
+  <input type="text" id="inpAvsender"required
+  placeholder="Hvem du er?">
+
+  <input type="text" id="inpMening" required
+  placeholder="Hva sier du?">
+
+  <button type="submit"class="button">OK</button>
+</form>
+
+</section>
 
   <script>
     let database = firebase.database();
     let meldinger = database.ref("meldinger");
-    let skjema = document.
-    getElementById("skjema");
+    let skjema = document.getElementById("skjema");
     let inpAvsender = document.
     getElementById("inpAvsender");
 

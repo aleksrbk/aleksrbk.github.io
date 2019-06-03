@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+
+header{
+  padding: 1.2rem 0;
+  background-color: rgb(25, 161, 235);
+}
+
+.navbar {
+  overflow: hidden;
+/*  background-color: #333; */
+  background-color: rgb(25, 161, 235);
+  display: flex;
+  justify-content: space-around;
+  /*grid-template-columns: 150px auto minmax(625px, 4fr) 100px 100px*/
+}
+
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 60%;
+  height: 100px:
+}
+
+.navbar .hover:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: black;
+}
+
+div{
+  display: block
+}
+
+
+.HERO{
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding left: 1.5rem;
+  padding right: 1.5rem;
+
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.columns:last-child {
+    margin-bottom: -.75rem;
+}
+
+.columns.is-centered {
+    justify-content: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+    margin-top: -.75rem;
+}
+
+
+.colum h1{
+  font-size: 2rem;
+}
+
+.colum h2{
+  font-size: 20px;
+}
+
+@media(max-width: 1200px){
+  .columns{
+    flex-direction:column ;
+  }
+}
+
+.like{
+  margin: 2rem 0;
+  height:120px;
+  width: 120px;
+}
+
+.footer-colum{
+  width: 500px;
+  margin:auto;
+}
+@media(max-width:500px){
+.footer-colum{
+  width: 100%;
+}
+}
+.Computer{
+  width: 100%;
+}
+
+.Hero-2{
+  background-color:rgb(25, 161, 235);
+/*  padding: 9rem 1.5rem;*/
+  padding-bottom: 18rem;
+}
+
+.section-center{
+  text-align: center;
+  margin-top: -14rem;
+  padding-bottom: 1rem;
+  padding: 5rem 1.5rem;
+}
+
+.is-size{
+max-width: 1200px;
+}
+
+.boxen{
+  border-radius: 12px;
+  background-color: #fff;
+  color: #293347;
+  display: block;
+}
+
+.column{
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/*
+.navbar{
+  padding: 1.2rem 0;
+  box-shadow: none;
+  z-index: auto;
+}
+.navbar>.container{
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%
+}
+
+.navbar>.container .navbar-brand{
+  margin-left: -0.75rem;
+}
+*/
